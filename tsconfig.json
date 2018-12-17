@@ -1,16 +1,16 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
+        "rootDir": "src",
         "outDir": "dist",
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es2017",
         "skipLibCheck": true,
         "experimentalDecorators": true,
+        "strict": true,
         "declaration": true,
         "sourceMap": false,
         "inlineSourceMap": true,
-        "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
@@ -18,5 +18,8 @@
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "suppressImplicitAnyIndexErrors": true
-    }
+    },
+    "include": [
+        "src/**/*"
+    ]
 }

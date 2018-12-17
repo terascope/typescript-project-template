@@ -12,7 +12,7 @@
         "lint": "tslint --project tsconfig.json --format verbose",
         "lint:fix": "npm run lint -- --fix",
         "prepare": "npm run build",
-        "build": "tsc --project tsconfig.build.json --pretty",
+        "build": "tsc --project tsconfig.json --pretty",
         "build:watch": "npm run build -- --watch",
         "test": "jest",
         "test:watch": "jest --coverage=false --notify --watch --onlyChanged",
@@ -22,14 +22,14 @@
     "author": "Terascope, LLC <info@terascope.io>",
     "license": "MIT",
     "devDependencies": {
-        "@types/jest": "^23.3.9",
-        "@types/node": "^10.12.8",
+        "@types/jest": "^23.3.10",
+        "@types/node": "^10.12.15",
         "jest": "^23.6.0",
         "jest-extended": "^0.11.0",
-        "ts-jest": "^23.10.4",
+        "ts-jest": "^23.10.5",
         "tslint": "^5.11.0",
         "tslint-config-airbnb": "^5.11.1",
-        "typescript": "^3.1.6"
+        "typescript": "^3.2.2"
     },
     "engines": {
         "node": ">=8.0.0"
