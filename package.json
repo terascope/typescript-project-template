@@ -9,29 +9,29 @@
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "scripts": {
-        "lint": "tslint --project tsconfig.json --format verbose",
-        "lint:fix": "npm run lint -- --fix",
-        "prepare": "npm run build",
-        "build": "tsc --project tsconfig.json --pretty",
-        "build:watch": "npm run build -- --watch",
+        "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+        "lint:fix": "yarn lint --fix",
+        "prepare": "yarn build",
+        "build": "tsc --project tsconfig.json",
+        "build:watch": "yarn build --watch",
         "test": "jest",
         "test:watch": "jest --coverage=false --notify --watch --onlyChanged",
-        "test:debug": "env DEBUG='*teraslice*' jest --detectOpenHandles --coverage=false --runInBand"
+        "test:debug": "env DEBUG=\"${DEBUG:-*teraslice*}\" jest --detectOpenHandles --coverage=false --runInBand"
     },
     "repository": "git@github.com:terascope/typescript-project-template.git",
     "author": "Terascope, LLC <info@terascope.io>",
     "license": "MIT",
     "devDependencies": {
-        "@types/jest": "^23.3.10",
-        "@types/node": "^10.12.15",
-        "jest": "^23.6.0",
-        "jest-extended": "^0.11.0",
-        "ts-jest": "^23.10.5",
-        "tslint": "^5.11.0",
-        "tslint-config-airbnb": "^5.11.1",
-        "typescript": "^3.2.2"
+        "@terascope/eslint-config": "^0.2.3",
+        "@types/jest": "^24.9.1",
+        "@types/node": "^13.5.0",
+        "eslint": "^6.8.0",
+        "jest": "^25.1.0",
+        "jest-extended": "^0.11.4",
+        "ts-jest": "^25.0.0",
+        "typescript": "^3.7.5"
     },
     "engines": {
-        "node": ">=8.0.0"
+        "node": ">=10.0.0"
     }
 }

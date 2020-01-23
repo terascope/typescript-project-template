@@ -5,14 +5,10 @@ describe('Example', () => {
     const example = new Example();
 
     describe('->initialize', () => {
-        it('should resolve true', () => {
-            return expect(example.initialize()).resolves.toBeTrue();
-        });
+        it('should resolve true', () => expect(example.initialize()).resolves.toBeTrue());
     });
 
     describe('->shutdown', () => {
-        it('should resolve true', () => {
-            return expect(example.shutdown()).resolves.toBeTrue();
-        });
+        it('should resolve true', () => expect(example.shutdown()).resolves.toBeTrue());
     });
 });
